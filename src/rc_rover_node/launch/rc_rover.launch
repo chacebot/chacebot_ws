@@ -1,0 +1,3 @@
+<launch>
+  <node name="rc_controller" pkg="rc_rover_node" type="main.py" output="screen" />
+</launch>

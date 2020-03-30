@@ -1,0 +1,15 @@
+/usr/local/_setup_util.py
+/usr/local/env.sh
+/usr/local/setup.bash
+/usr/local/local_setup.bash
+/usr/local/setup.sh
+/usr/local/local_setup.sh
+/usr/local/setup.zsh
+/usr/local/local_setup.zsh
+/usr/local/.rosinstall
+/usr/local/lib/pkgconfig/rc_rover_node.pc
+/usr/local/share/rc_rover_node/cmake/rc_rover_nodeConfig.cmake
+/usr/local/share/rc_rover_node/cmake/rc_rover_nodeConfig-version.cmake
+/usr/local/share/rc_rover_node/package.xml
+/usr/local/lib/rc_rover_node/main.py
+/usr/local/share/rc_rover_node/launch/rc_rover.launch

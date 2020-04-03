@@ -67,7 +67,7 @@ set(gopigo3_node_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(gopigo3_node_SOURCE_PREFIX /home/pi/gopigo3_ws/src)
+  set(gopigo3_node_SOURCE_PREFIX /home/pi/gopigo3_ws/src/gopigo3_node)
   set(gopigo3_node_DEVEL_PREFIX /home/pi/gopigo3_ws/devel)
   set(gopigo3_node_INSTALL_PREFIX "")
   set(gopigo3_node_PREFIX ${gopigo3_node_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT "/home/pi/gopigo3_ws/devel/include " STREQUAL " ")
         message(FATAL_ERROR "Project 'gopigo3_node' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'gopigo3_node' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/pi/gopigo3_ws/src/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'gopigo3_node' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/pi/gopigo3_ws/src/gopigo3_node/${idir}'.  ${_report}")
     endif()
     _list_append_unique(gopigo3_node_INCLUDE_DIRS ${include})
   endforeach()
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/pi/gopigo3_ws/devel/lib;/home/pi/gopigo3_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/pi/gopigo3_ws/devel/lib;/home/pi/gopigo3_ws/src/rc_rover_node/devel/lib;/home/pi/gopigo3_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

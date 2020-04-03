@@ -120,7 +120,7 @@ class RCcontroller:
     def cmdOutputs(self):
         try:
             ## scaling factor implementation
-            _steering = (self.steering())*2    ##* scalling factor *
+            _steering = -(self.steering())*2    ##* scalling factor *
             _drive = self.drive()   ##* scaling factor *
 
         except TypeError:
@@ -151,7 +151,7 @@ def main():
     rate = rospy.Rate(10)
 
 
-     while not rospy.is_shutdown():
+    while not rospy.is_shutdown():
         node.execution()
         rate.sleep()
 

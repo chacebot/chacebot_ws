@@ -120,8 +120,8 @@ class RCcontroller:
     def cmdOutputs(self):
         try:
             ## scaling factor implementation
-            _steering = -(self.steering())*2    ##* scalling factor *
-            _drive = self.drive()   ##* scaling factor *
+            _steering = -(self.steering())*3    ##* scalling factor *
+            _drive = self.drive()*0.25   ##* scaling factor *
 
         except TypeError:
             _steering = 0

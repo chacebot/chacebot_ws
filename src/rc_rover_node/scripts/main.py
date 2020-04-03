@@ -25,7 +25,7 @@ class RCcontroller:
         thread.start()
 
         ## ros implementation here: self.publisher = rospy.Publiser(topic, message, queue size)
-        self.publisher = rospy.Publisher("cmd_vel", Twist)
+        self.publisher = rospy.Publisher("cmd_vel", Twist, queue_size=10)
         self.vel_msg = Twist()
         
 
@@ -120,8 +120,8 @@ class RCcontroller:
     def cmdOutputs(self):
         try:
             ## scaling factor implementation
-            _steering = self.steering()     ##* scalling factor *
-            _drive = self.drive()   ##* scaling factor *
+            _steering = self.steering() + self.drive()*2    ##* scalling factor *
+            _drive = self.drive() - self.steering()  ##* scaling factor *
 
         except TypeError:
             _steering = 0
@@ -134,8 +134,6 @@ class RCcontroller:
 
         else:
             return[0, 0]
-
-        # return roscommand(correct format)
 
          
 
@@ -150,11 +148,9 @@ def main():
     rate = rospy.Rate(10)
 
     try:
-    #while not rospy.is_shutdown():
-        while True:
+        while not rospy.is_shutdown():
             node.execution()
-            time.sleep(0.01)
-        #rate.sleep()
+            rate.sleep()
 
     except KeyboardInterrupt:
         sys.exit()

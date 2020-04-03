@@ -128,8 +128,8 @@ class RCcontroller:
             _drive = 0
             pass
 
-	print("Steering: {}".format(_steering))
-	print("Drive: {}".format(_drive))
+	#print("Steering: {}".format(_steering))
+	#print("Drive: {}".format(_drive))
 
 
         if (_steering is not None and _drive is not None):
@@ -148,7 +148,7 @@ def main():
     node_name = 'rc_controller'
     rospy.init_node(node_name)
     node = RCcontroller(_devicePort)
-    rate = rospy.Rate(10)
+    rate = rospy.Rate(50)
 
 
     while not rospy.is_shutdown():

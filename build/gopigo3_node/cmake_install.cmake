@@ -95,6 +95,18 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/gopigo3_node" TYPE PROGRAM FILES "/home/pi/gopigo3_ws/src/gopigo3_node/src/gopigo3_drivedistance_sensor.py")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/gopigo3_node" TYPE PROGRAM FILES "/home/pi/gopigo3_ws/src/gopigo3_node/src/gopigo3_imu.py")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/gopigo3_node" TYPE PROGRAM FILES "/home/pi/gopigo3_ws/src/gopigo3_node/src/ultra_sonic.py")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gopigo3_node" TYPE DIRECTORY FILES "/home/pi/gopigo3_ws/src/gopigo3_node/launch")
 endif()
 

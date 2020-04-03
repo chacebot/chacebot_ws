@@ -27,7 +27,7 @@ def main():
     msg_magn = MagneticField()
     hdr = Header(stamp=rospy.Time.now(), frame_id="IMU")
 
-    rate = rospy.Rate(rospy.get_param('~hz', 30))
+    rate = rospy.Rate(rospy.get_param('~hz', 5))
     while not rospy.is_shutdown():
         q = sensor.read_quaternion()        # x,y,z,w
         mag = sensor.read_magnetometer()    # micro Tesla (µT)

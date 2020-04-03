@@ -470,9 +470,9 @@ gopigo3_node/preinstall:
 
 # All Build rule for target.
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_py.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_SPI.dir/all
+gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_py.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatusLR.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_py.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_py.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_py.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatus.dir/all
-gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_py.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatusLR.dir/all
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_py.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_py.dir/depend
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_py.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_py.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=21,22,23,24,25 "Built target gopigo3_node_generate_messages_py"
@@ -986,8 +986,8 @@ clean: gopigo3_node/CMakeFiles/actionlib_msgs_generate_messages_py.dir/clean
 # All Build rule for target.
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_SPI.dir/all
-gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatus.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatusLR.dir/all
+gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatus.dir/all
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/depend
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=15,16,17 "Built target gopigo3_node_generate_messages_lisp"
@@ -1149,8 +1149,8 @@ clean: gopigo3_node/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 # All Build rule for target.
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_SPI.dir/all
-gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatus.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatusLR.dir/all
+gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatus.dir/all
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/depend
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=8,9,10 "Built target gopigo3_node_generate_messages_cpp"
@@ -1471,10 +1471,10 @@ clean: gopigo3_node/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/clean
 
 # All Build rule for target.
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/all: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_py.dir/all
-gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/all: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/all
-gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/all: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/all: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_nodejs.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/all: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_eus.dir/all
+gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/all: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/all
+gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/all: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/depend
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target gopigo3_node_generate_messages"
@@ -1512,9 +1512,9 @@ clean: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/clean
 
 # All Build rule for target.
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_nodejs.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_SPI.dir/all
-gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_nodejs.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatus.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_nodejs.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_nodejs.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatusLR.dir/all
+gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_nodejs.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatus.dir/all
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_nodejs.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_nodejs.dir/depend
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_nodejs.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=18,19,20 "Built target gopigo3_node_generate_messages_nodejs"
@@ -1580,8 +1580,8 @@ clean: gopigo3_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 # All Build rule for target.
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_eus.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_eus.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_SPI.dir/all
-gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_eus.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatus.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_eus.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatusLR.dir/all
+gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_eus.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatus.dir/all
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_eus.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_eus.dir/depend
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_eus.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_eus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=11,12,13,14 "Built target gopigo3_node_generate_messages_eus"

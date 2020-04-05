@@ -1,0 +1,8 @@
+prefix=/home/pi/gopigo3_ws/src/local_controller_node/devel
+
+Name: local_controller_node
+Description: Description of local_controller_node
+Version: 0.0.0
+Cflags: -I/home/pi/gopigo3_ws/src/local_controller_node/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

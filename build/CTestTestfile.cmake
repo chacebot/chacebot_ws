@@ -6,4 +6,5 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("gopigo3_node")
+subdirs("local_controller_node")
 subdirs("rc_rover_node")

@@ -56,7 +56,7 @@ class RCcontroller:
             with self.lock:
                 self._cleanCMD[_rawCMD[0]] = int(_rawCMD[1])
 
-            #print("Raw CMD0: {}".format(_rawCMD[0]))
+            ##print("Clean CMD0: {}".format(self._cleanCMD.get(0)))
         
         except TypeError:
             print("Passed at Read")
@@ -76,11 +76,14 @@ class RCcontroller:
         self.publisher.publish(self.cmdOutputs())
 
     def cmdOutputs(self):
-        if (_steering is not None and _drive is not None):
-            local_cmd = RControllerCommands(steering = self.serialCommand()[self._steeringChannel], drive = self.serialCommand()[self._driveChannel], status = self._enableStatus)
+        _recieverInput = self.serialCommand()
+        ##print("Serial Command [0]: {}".format(_recieverInput.get(self._steeringChannel)))
+        if (_recieverInput.get(self._steeringChannel) is not None):
+            ##print("Serial Command [0]: {}".format(_recieverInput.get(self._steeringChannel)))
+            local_cmd = RControllerCommands(steering=_recieverInput.get(self._steeringChannel), drive=_recieverInput.get(self._driveChannel), status = self._enableStatus)
             return local_cmd
         else:
-            local_cmd = RControllerCommands(steering = 1500, drive = 1500, status = False)
+            local_cmd = RControllerCommands(steering=1500, drive=1500, status = False)
             return local_cmd        
 
     
@@ -88,10 +91,10 @@ def main():
 
     _devicePort = '/dev/ttyACM0'
 
-    node_name = 'rc_controller'
+    node_name = 'local_controller_node'
     rospy.init_node(node_name)
     node = RCcontroller(_devicePort)
-    rate = rospy.Rate(10)
+    rate = rospy.Rate(5)
 
 
     while not rospy.is_shutdown():

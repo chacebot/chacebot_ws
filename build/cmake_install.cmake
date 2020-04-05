@@ -118,6 +118,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/pi/gopigo3_ws/build/gtest/cmake_install.cmake")
   include("/home/pi/gopigo3_ws/build/gopigo3_node/cmake_install.cmake")
+  include("/home/pi/gopigo3_ws/build/local_controller_node/cmake_install.cmake")
   include("/home/pi/gopigo3_ws/build/rc_rover_node/cmake_install.cmake")
 
 endif()

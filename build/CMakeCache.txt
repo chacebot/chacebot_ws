@@ -356,6 +356,12 @@ gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 //Path to a library.
 lib:FILEPATH=/home/pi/ros_catkin_ws/build/opt/ros/kinetic/lib/librostime.so
 
+//Value Computed by CMake
+local_controller_node_BINARY_DIR:STATIC=/home/pi/gopigo3_ws/build/local_controller_node
+
+//Value Computed by CMake
+local_controller_node_SOURCE_DIR:STATIC=/home/pi/gopigo3_ws/src/local_controller_node
+
 //The directory containing a CMake configuration file for message_generation.
 message_generation_DIR:PATH=/opt/ros/kinetic/share/message_generation/cmake
 

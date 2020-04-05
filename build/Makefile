@@ -854,6 +854,162 @@ actionlib_msgs_generate_messages_nodejs/fast:
 	$(MAKE) -f gopigo3_node/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make gopigo3_node/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
+#=============================================================================
+# Target rules for targets named local_controller_node_genpy
+
+# Build rule for target.
+local_controller_node_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node_genpy
+.PHONY : local_controller_node_genpy
+
+# fast build rule for target.
+local_controller_node_genpy/fast:
+	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_genpy.dir/build.make local_controller_node/CMakeFiles/local_controller_node_genpy.dir/build
+.PHONY : local_controller_node_genpy/fast
+
+#=============================================================================
+# Target rules for targets named _local_controller_node_generate_messages_check_deps_RControllerCommands
+
+# Build rule for target.
+_local_controller_node_generate_messages_check_deps_RControllerCommands: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _local_controller_node_generate_messages_check_deps_RControllerCommands
+.PHONY : _local_controller_node_generate_messages_check_deps_RControllerCommands
+
+# fast build rule for target.
+_local_controller_node_generate_messages_check_deps_RControllerCommands/fast:
+	$(MAKE) -f local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/build.make local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/build
+.PHONY : _local_controller_node_generate_messages_check_deps_RControllerCommands/fast
+
+#=============================================================================
+# Target rules for targets named local_controller_node_generate_messages_eus
+
+# Build rule for target.
+local_controller_node_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node_generate_messages_eus
+.PHONY : local_controller_node_generate_messages_eus
+
+# fast build rule for target.
+local_controller_node_generate_messages_eus/fast:
+	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/build
+.PHONY : local_controller_node_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named local_controller_node_generate_messages_cpp
+
+# Build rule for target.
+local_controller_node_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node_generate_messages_cpp
+.PHONY : local_controller_node_generate_messages_cpp
+
+# fast build rule for target.
+local_controller_node_generate_messages_cpp/fast:
+	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/build
+.PHONY : local_controller_node_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named local_controller_node_generate_messages
+
+# Build rule for target.
+local_controller_node_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node_generate_messages
+.PHONY : local_controller_node_generate_messages
+
+# fast build rule for target.
+local_controller_node_generate_messages/fast:
+	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/build
+.PHONY : local_controller_node_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named local_controller_node_geneus
+
+# Build rule for target.
+local_controller_node_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node_geneus
+.PHONY : local_controller_node_geneus
+
+# fast build rule for target.
+local_controller_node_geneus/fast:
+	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_geneus.dir/build.make local_controller_node/CMakeFiles/local_controller_node_geneus.dir/build
+.PHONY : local_controller_node_geneus/fast
+
+#=============================================================================
+# Target rules for targets named local_controller_node_generate_messages_lisp
+
+# Build rule for target.
+local_controller_node_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node_generate_messages_lisp
+.PHONY : local_controller_node_generate_messages_lisp
+
+# fast build rule for target.
+local_controller_node_generate_messages_lisp/fast:
+	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/build
+.PHONY : local_controller_node_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named local_controller_node_generate_messages_py
+
+# Build rule for target.
+local_controller_node_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node_generate_messages_py
+.PHONY : local_controller_node_generate_messages_py
+
+# fast build rule for target.
+local_controller_node_generate_messages_py/fast:
+	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/build
+.PHONY : local_controller_node_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named local_controller_node_gennodejs
+
+# Build rule for target.
+local_controller_node_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node_gennodejs
+.PHONY : local_controller_node_gennodejs
+
+# fast build rule for target.
+local_controller_node_gennodejs/fast:
+	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/build.make local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/build
+.PHONY : local_controller_node_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named local_controller_node_gencpp
+
+# Build rule for target.
+local_controller_node_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node_gencpp
+.PHONY : local_controller_node_gencpp
+
+# fast build rule for target.
+local_controller_node_gencpp/fast:
+	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/build
+.PHONY : local_controller_node_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named local_controller_node_genlisp
+
+# Build rule for target.
+local_controller_node_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node_genlisp
+.PHONY : local_controller_node_genlisp
+
+# fast build rule for target.
+local_controller_node_genlisp/fast:
+	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/build
+.PHONY : local_controller_node_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named local_controller_node_generate_messages_nodejs
+
+# Build rule for target.
+local_controller_node_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node_generate_messages_nodejs
+.PHONY : local_controller_node_generate_messages_nodejs
+
+# fast build rule for target.
+local_controller_node_generate_messages_nodejs/fast:
+	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/build
+.PHONY : local_controller_node_generate_messages_nodejs/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -920,6 +1076,18 @@ help:
 	@echo "... gopigo3_node_genpy"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... local_controller_node_genpy"
+	@echo "... _local_controller_node_generate_messages_check_deps_RControllerCommands"
+	@echo "... local_controller_node_generate_messages_eus"
+	@echo "... local_controller_node_generate_messages_cpp"
+	@echo "... local_controller_node_generate_messages"
+	@echo "... local_controller_node_geneus"
+	@echo "... local_controller_node_generate_messages_lisp"
+	@echo "... local_controller_node_generate_messages_py"
+	@echo "... local_controller_node_gennodejs"
+	@echo "... local_controller_node_gencpp"
+	@echo "... local_controller_node_genlisp"
+	@echo "... local_controller_node_generate_messages_nodejs"
 .PHONY : help
 
 

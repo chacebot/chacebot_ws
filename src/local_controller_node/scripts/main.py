@@ -5,7 +5,7 @@ import rospy
 # import rosutill
 import threading
 
-from local_controller_node.msg import RControllerCommands
+from msg.msg import RCLocal
 
 
 class RCcontroller:
@@ -28,7 +28,7 @@ class RCcontroller:
         self._enableStatus = True
 
         ## ros implementation here: self.publisher = rospy.Publiser(topic, message, queue size)
-        self.publisher = rospy.Publisher("local_cmd", RControllerCommands, queue_size=10)
+        self.publisher = rospy.Publisher("local_cmd", RCLocal, queue_size=10)
         
 
     def serialInterpreter(self):

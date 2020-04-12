@@ -80,10 +80,10 @@ class RCcontroller:
         ##print("Serial Command [0]: {}".format(_recieverInput.get(self._steeringChannel)))
         if (_recieverInput.get(self._steeringChannel) is not None):
             ##print("Serial Command [0]: {}".format(_recieverInput.get(self._steeringChannel)))
-            local_cmd = RControllerCommands(steering=_recieverInput.get(self._steeringChannel), drive=_recieverInput.get(self._driveChannel), status = self._enableStatus)
+            local_cmd = RCLocal(steering=_recieverInput.get(self._steeringChannel), drive=_recieverInput.get(self._driveChannel), status = self._enableStatus)
             return local_cmd
         else:
-            local_cmd = RControllerCommands(steering=1500, drive=1500, status = False)
+            local_cmd = RCLocal(steering=1500, drive=1500, status = False)
             return local_cmd        
 
     

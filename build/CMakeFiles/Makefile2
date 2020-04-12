@@ -984,8 +984,8 @@ clean: gopigo3_node/CMakeFiles/actionlib_msgs_generate_messages_py.dir/clean
 # Target rules for target gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir
 
 # All Build rule for target.
-gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_SPI.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_SPI.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatusLR.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatus.dir/all
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/depend
@@ -1147,9 +1147,9 @@ clean: gopigo3_node/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 # Target rules for target gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir
 
 # All Build rule for target.
+gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_SPI.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatusLR.dir/all
-gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all: gopigo3_node/CMakeFiles/_gopigo3_node_generate_messages_check_deps_MotorStatus.dir/all
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/depend
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/build
@@ -1472,9 +1472,9 @@ clean: gopigo3_node/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/clean
 # All Build rule for target.
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/all: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_lisp.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/all: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_py.dir/all
+gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/all: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/all: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_nodejs.dir/all
 gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/all: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_eus.dir/all
-gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/all: gopigo3_node/CMakeFiles/gopigo3_node_generate_messages_cpp.dir/all
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/depend
 	$(MAKE) -f gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/build.make gopigo3_node/CMakeFiles/gopigo3_node_generate_messages.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target gopigo3_node_generate_messages"
@@ -1898,6 +1898,763 @@ clean: gopigo3_node/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory msg
+
+# Convenience name for "all" pass in the directory.
+msg/all: msg/CMakeFiles/msg_generate_messages.dir/all
+
+.PHONY : msg/all
+
+# Convenience name for "clean" pass in the directory.
+msg/clean: msg/CMakeFiles/msg_genpy.dir/clean
+msg/clean: msg/CMakeFiles/msg_generate_messages_py.dir/clean
+msg/clean: msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+msg/clean: msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+msg/clean: msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+msg/clean: msg/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+msg/clean: msg/CMakeFiles/msg_generate_messages_eus.dir/clean
+msg/clean: msg/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+msg/clean: msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+msg/clean: msg/CMakeFiles/msg_generate_messages.dir/clean
+msg/clean: msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+msg/clean: msg/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+msg/clean: msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+msg/clean: msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/clean
+msg/clean: msg/CMakeFiles/msg_geneus.dir/clean
+msg/clean: msg/CMakeFiles/msg_generate_messages_cpp.dir/clean
+msg/clean: msg/CMakeFiles/msg_generate_messages_nodejs.dir/clean
+msg/clean: msg/CMakeFiles/roscpp_generate_messages_py.dir/clean
+msg/clean: msg/CMakeFiles/msg_gencpp.dir/clean
+msg/clean: msg/CMakeFiles/msg_generate_messages_lisp.dir/clean
+msg/clean: msg/CMakeFiles/msg_genlisp.dir/clean
+msg/clean: msg/CMakeFiles/msg_gennodejs.dir/clean
+
+.PHONY : msg/clean
+
+# Convenience name for "preinstall" pass in the directory.
+msg/preinstall:
+
+.PHONY : msg/preinstall
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/msg_genpy.dir
+
+# All Build rule for target.
+msg/CMakeFiles/msg_genpy.dir/all: msg/CMakeFiles/msg_generate_messages_py.dir/all
+	$(MAKE) -f msg/CMakeFiles/msg_genpy.dir/build.make msg/CMakeFiles/msg_genpy.dir/depend
+	$(MAKE) -f msg/CMakeFiles/msg_genpy.dir/build.make msg/CMakeFiles/msg_genpy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target msg_genpy"
+.PHONY : msg/CMakeFiles/msg_genpy.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/msg_genpy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/msg_genpy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/msg_genpy.dir/rule
+
+# Convenience name for target.
+msg_genpy: msg/CMakeFiles/msg_genpy.dir/rule
+
+.PHONY : msg_genpy
+
+# clean rule for target.
+msg/CMakeFiles/msg_genpy.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/msg_genpy.dir/build.make msg/CMakeFiles/msg_genpy.dir/clean
+.PHONY : msg/CMakeFiles/msg_genpy.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/msg_genpy.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/msg_generate_messages_py.dir
+
+# All Build rule for target.
+msg/CMakeFiles/msg_generate_messages_py.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_py.dir/all
+msg/CMakeFiles/msg_generate_messages_py.dir/all: msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/all
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_py.dir/build.make msg/CMakeFiles/msg_generate_messages_py.dir/depend
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_py.dir/build.make msg/CMakeFiles/msg_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=37,38 "Built target msg_generate_messages_py"
+.PHONY : msg/CMakeFiles/msg_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/msg_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/msg_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/msg_generate_messages_py.dir/rule
+
+# Convenience name for target.
+msg_generate_messages_py: msg/CMakeFiles/msg_generate_messages_py.dir/rule
+
+.PHONY : msg_generate_messages_py
+
+# clean rule for target.
+msg/CMakeFiles/msg_generate_messages_py.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_py.dir/build.make msg/CMakeFiles/msg_generate_messages_py.dir/clean
+.PHONY : msg/CMakeFiles/msg_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/msg_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# clean rule for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# clean rule for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_nodejs: msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# clean rule for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/roscpp_generate_messages_cpp.dir
+
+# All Build rule for target.
+msg/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make msg/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make msg/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: msg/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# clean rule for target.
+msg/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make msg/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/msg_generate_messages_eus.dir
+
+# All Build rule for target.
+msg/CMakeFiles/msg_generate_messages_eus.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+msg/CMakeFiles/msg_generate_messages_eus.dir/all: msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/all
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_eus.dir/build.make msg/CMakeFiles/msg_generate_messages_eus.dir/depend
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_eus.dir/build.make msg/CMakeFiles/msg_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=33,34 "Built target msg_generate_messages_eus"
+.PHONY : msg/CMakeFiles/msg_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/msg_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/msg_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/msg_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+msg_generate_messages_eus: msg/CMakeFiles/msg_generate_messages_eus.dir/rule
+
+.PHONY : msg_generate_messages_eus
+
+# clean rule for target.
+msg/CMakeFiles/msg_generate_messages_eus.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_eus.dir/build.make msg/CMakeFiles/msg_generate_messages_eus.dir/clean
+.PHONY : msg/CMakeFiles/msg_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/msg_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/roscpp_generate_messages_eus.dir
+
+# All Build rule for target.
+msg/CMakeFiles/roscpp_generate_messages_eus.dir/all:
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_eus.dir/build.make msg/CMakeFiles/roscpp_generate_messages_eus.dir/depend
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_eus.dir/build.make msg/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/roscpp_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_eus: msg/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+.PHONY : roscpp_generate_messages_eus
+
+# clean rule for target.
+msg/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_eus.dir/build.make msg/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# clean rule for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/msg_generate_messages.dir
+
+# All Build rule for target.
+msg/CMakeFiles/msg_generate_messages.dir/all: msg/CMakeFiles/msg_generate_messages_py.dir/all
+msg/CMakeFiles/msg_generate_messages.dir/all: msg/CMakeFiles/msg_generate_messages_eus.dir/all
+msg/CMakeFiles/msg_generate_messages.dir/all: msg/CMakeFiles/msg_generate_messages_cpp.dir/all
+msg/CMakeFiles/msg_generate_messages.dir/all: msg/CMakeFiles/msg_generate_messages_nodejs.dir/all
+msg/CMakeFiles/msg_generate_messages.dir/all: msg/CMakeFiles/msg_generate_messages_lisp.dir/all
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages.dir/build.make msg/CMakeFiles/msg_generate_messages.dir/depend
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages.dir/build.make msg/CMakeFiles/msg_generate_messages.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target msg_generate_messages"
+.PHONY : msg/CMakeFiles/msg_generate_messages.dir/all
+
+# Include target in all.
+all: msg/CMakeFiles/msg_generate_messages.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/msg_generate_messages.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/msg_generate_messages.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/msg_generate_messages.dir/rule
+
+# Convenience name for target.
+msg_generate_messages: msg/CMakeFiles/msg_generate_messages.dir/rule
+
+.PHONY : msg_generate_messages
+
+# clean rule for target.
+msg/CMakeFiles/msg_generate_messages.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages.dir/build.make msg/CMakeFiles/msg_generate_messages.dir/clean
+.PHONY : msg/CMakeFiles/msg_generate_messages.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/msg_generate_messages.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_eus: msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# clean rule for target.
+msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+.PHONY : msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/roscpp_generate_messages_lisp.dir
+
+# All Build rule for target.
+msg/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make msg/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make msg/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: msg/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+.PHONY : roscpp_generate_messages_lisp
+
+# clean rule for target.
+msg/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make msg/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/roscpp_generate_messages_nodejs.dir
+
+# All Build rule for target.
+msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_nodejs: msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+.PHONY : roscpp_generate_messages_nodejs
+
+# clean rule for target.
+msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir
+
+# All Build rule for target.
+msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/all:
+	$(MAKE) -f msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/build.make msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/depend
+	$(MAKE) -f msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/build.make msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target _msg_generate_messages_check_deps_RCLocal"
+.PHONY : msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/rule
+
+# Convenience name for target.
+_msg_generate_messages_check_deps_RCLocal: msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/rule
+
+.PHONY : _msg_generate_messages_check_deps_RCLocal
+
+# clean rule for target.
+msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/build.make msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/clean
+.PHONY : msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/msg_geneus.dir
+
+# All Build rule for target.
+msg/CMakeFiles/msg_geneus.dir/all: msg/CMakeFiles/msg_generate_messages_eus.dir/all
+	$(MAKE) -f msg/CMakeFiles/msg_geneus.dir/build.make msg/CMakeFiles/msg_geneus.dir/depend
+	$(MAKE) -f msg/CMakeFiles/msg_geneus.dir/build.make msg/CMakeFiles/msg_geneus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target msg_geneus"
+.PHONY : msg/CMakeFiles/msg_geneus.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/msg_geneus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/msg_geneus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/msg_geneus.dir/rule
+
+# Convenience name for target.
+msg_geneus: msg/CMakeFiles/msg_geneus.dir/rule
+
+.PHONY : msg_geneus
+
+# clean rule for target.
+msg/CMakeFiles/msg_geneus.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/msg_geneus.dir/build.make msg/CMakeFiles/msg_geneus.dir/clean
+.PHONY : msg/CMakeFiles/msg_geneus.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/msg_geneus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/msg_generate_messages_cpp.dir
+
+# All Build rule for target.
+msg/CMakeFiles/msg_generate_messages_cpp.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+msg/CMakeFiles/msg_generate_messages_cpp.dir/all: msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/all
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_cpp.dir/build.make msg/CMakeFiles/msg_generate_messages_cpp.dir/depend
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_cpp.dir/build.make msg/CMakeFiles/msg_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=32 "Built target msg_generate_messages_cpp"
+.PHONY : msg/CMakeFiles/msg_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/msg_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/msg_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/msg_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+msg_generate_messages_cpp: msg/CMakeFiles/msg_generate_messages_cpp.dir/rule
+
+.PHONY : msg_generate_messages_cpp
+
+# clean rule for target.
+msg/CMakeFiles/msg_generate_messages_cpp.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_cpp.dir/build.make msg/CMakeFiles/msg_generate_messages_cpp.dir/clean
+.PHONY : msg/CMakeFiles/msg_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/msg_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/msg_generate_messages_nodejs.dir
+
+# All Build rule for target.
+msg/CMakeFiles/msg_generate_messages_nodejs.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+msg/CMakeFiles/msg_generate_messages_nodejs.dir/all: msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/all
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_nodejs.dir/build.make msg/CMakeFiles/msg_generate_messages_nodejs.dir/depend
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_nodejs.dir/build.make msg/CMakeFiles/msg_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=36 "Built target msg_generate_messages_nodejs"
+.PHONY : msg/CMakeFiles/msg_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/msg_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/msg_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/msg_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+msg_generate_messages_nodejs: msg/CMakeFiles/msg_generate_messages_nodejs.dir/rule
+
+.PHONY : msg_generate_messages_nodejs
+
+# clean rule for target.
+msg/CMakeFiles/msg_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_nodejs.dir/build.make msg/CMakeFiles/msg_generate_messages_nodejs.dir/clean
+.PHONY : msg/CMakeFiles/msg_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/msg_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/roscpp_generate_messages_py.dir
+
+# All Build rule for target.
+msg/CMakeFiles/roscpp_generate_messages_py.dir/all:
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_py.dir/build.make msg/CMakeFiles/roscpp_generate_messages_py.dir/depend
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_py.dir/build.make msg/CMakeFiles/roscpp_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/roscpp_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: msg/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+.PHONY : roscpp_generate_messages_py
+
+# clean rule for target.
+msg/CMakeFiles/roscpp_generate_messages_py.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/roscpp_generate_messages_py.dir/build.make msg/CMakeFiles/roscpp_generate_messages_py.dir/clean
+.PHONY : msg/CMakeFiles/roscpp_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/roscpp_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/msg_gencpp.dir
+
+# All Build rule for target.
+msg/CMakeFiles/msg_gencpp.dir/all: msg/CMakeFiles/msg_generate_messages_cpp.dir/all
+	$(MAKE) -f msg/CMakeFiles/msg_gencpp.dir/build.make msg/CMakeFiles/msg_gencpp.dir/depend
+	$(MAKE) -f msg/CMakeFiles/msg_gencpp.dir/build.make msg/CMakeFiles/msg_gencpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target msg_gencpp"
+.PHONY : msg/CMakeFiles/msg_gencpp.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/msg_gencpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/msg_gencpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/msg_gencpp.dir/rule
+
+# Convenience name for target.
+msg_gencpp: msg/CMakeFiles/msg_gencpp.dir/rule
+
+.PHONY : msg_gencpp
+
+# clean rule for target.
+msg/CMakeFiles/msg_gencpp.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/msg_gencpp.dir/build.make msg/CMakeFiles/msg_gencpp.dir/clean
+.PHONY : msg/CMakeFiles/msg_gencpp.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/msg_gencpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/msg_generate_messages_lisp.dir
+
+# All Build rule for target.
+msg/CMakeFiles/msg_generate_messages_lisp.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+msg/CMakeFiles/msg_generate_messages_lisp.dir/all: msg/CMakeFiles/_msg_generate_messages_check_deps_RCLocal.dir/all
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_lisp.dir/build.make msg/CMakeFiles/msg_generate_messages_lisp.dir/depend
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_lisp.dir/build.make msg/CMakeFiles/msg_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=35 "Built target msg_generate_messages_lisp"
+.PHONY : msg/CMakeFiles/msg_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/msg_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/msg_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/msg_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+msg_generate_messages_lisp: msg/CMakeFiles/msg_generate_messages_lisp.dir/rule
+
+.PHONY : msg_generate_messages_lisp
+
+# clean rule for target.
+msg/CMakeFiles/msg_generate_messages_lisp.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/msg_generate_messages_lisp.dir/build.make msg/CMakeFiles/msg_generate_messages_lisp.dir/clean
+.PHONY : msg/CMakeFiles/msg_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/msg_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/msg_genlisp.dir
+
+# All Build rule for target.
+msg/CMakeFiles/msg_genlisp.dir/all: msg/CMakeFiles/msg_generate_messages_lisp.dir/all
+	$(MAKE) -f msg/CMakeFiles/msg_genlisp.dir/build.make msg/CMakeFiles/msg_genlisp.dir/depend
+	$(MAKE) -f msg/CMakeFiles/msg_genlisp.dir/build.make msg/CMakeFiles/msg_genlisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target msg_genlisp"
+.PHONY : msg/CMakeFiles/msg_genlisp.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/msg_genlisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/msg_genlisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/msg_genlisp.dir/rule
+
+# Convenience name for target.
+msg_genlisp: msg/CMakeFiles/msg_genlisp.dir/rule
+
+.PHONY : msg_genlisp
+
+# clean rule for target.
+msg/CMakeFiles/msg_genlisp.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/msg_genlisp.dir/build.make msg/CMakeFiles/msg_genlisp.dir/clean
+.PHONY : msg/CMakeFiles/msg_genlisp.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/msg_genlisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target msg/CMakeFiles/msg_gennodejs.dir
+
+# All Build rule for target.
+msg/CMakeFiles/msg_gennodejs.dir/all: msg/CMakeFiles/msg_generate_messages_nodejs.dir/all
+	$(MAKE) -f msg/CMakeFiles/msg_gennodejs.dir/build.make msg/CMakeFiles/msg_gennodejs.dir/depend
+	$(MAKE) -f msg/CMakeFiles/msg_gennodejs.dir/build.make msg/CMakeFiles/msg_gennodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target msg_gennodejs"
+.PHONY : msg/CMakeFiles/msg_gennodejs.dir/all
+
+# Build rule for subdir invocation for target.
+msg/CMakeFiles/msg_gennodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 msg/CMakeFiles/msg_gennodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
+.PHONY : msg/CMakeFiles/msg_gennodejs.dir/rule
+
+# Convenience name for target.
+msg_gennodejs: msg/CMakeFiles/msg_gennodejs.dir/rule
+
+.PHONY : msg_gennodejs
+
+# clean rule for target.
+msg/CMakeFiles/msg_gennodejs.dir/clean:
+	$(MAKE) -f msg/CMakeFiles/msg_gennodejs.dir/build.make msg/CMakeFiles/msg_gennodejs.dir/clean
+.PHONY : msg/CMakeFiles/msg_gennodejs.dir/clean
+
+# clean rule for target.
+clean: msg/CMakeFiles/msg_gennodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory local_controller_node
 
 # Convenience name for "all" pass in the directory.
@@ -1906,18 +2663,7 @@ local_controller_node/all: local_controller_node/CMakeFiles/local_controller_nod
 .PHONY : local_controller_node/all
 
 # Convenience name for "clean" pass in the directory.
-local_controller_node/clean: local_controller_node/CMakeFiles/local_controller_node_genpy.dir/clean
-local_controller_node/clean: local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/clean
-local_controller_node/clean: local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/clean
-local_controller_node/clean: local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/clean
 local_controller_node/clean: local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/clean
-local_controller_node/clean: local_controller_node/CMakeFiles/local_controller_node_geneus.dir/clean
-local_controller_node/clean: local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/clean
-local_controller_node/clean: local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/clean
-local_controller_node/clean: local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/clean
-local_controller_node/clean: local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/clean
-local_controller_node/clean: local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/clean
-local_controller_node/clean: local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/clean
 
 .PHONY : local_controller_node/clean
 
@@ -1927,144 +2673,10 @@ local_controller_node/preinstall:
 .PHONY : local_controller_node/preinstall
 
 #=============================================================================
-# Target rules for target local_controller_node/CMakeFiles/local_controller_node_genpy.dir
-
-# All Build rule for target.
-local_controller_node/CMakeFiles/local_controller_node_genpy.dir/all: local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/all
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_genpy.dir/build.make local_controller_node/CMakeFiles/local_controller_node_genpy.dir/depend
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_genpy.dir/build.make local_controller_node/CMakeFiles/local_controller_node_genpy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target local_controller_node_genpy"
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_genpy.dir/all
-
-# Build rule for subdir invocation for target.
-local_controller_node/CMakeFiles/local_controller_node_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node/CMakeFiles/local_controller_node_genpy.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_genpy.dir/rule
-
-# Convenience name for target.
-local_controller_node_genpy: local_controller_node/CMakeFiles/local_controller_node_genpy.dir/rule
-
-.PHONY : local_controller_node_genpy
-
-# clean rule for target.
-local_controller_node/CMakeFiles/local_controller_node_genpy.dir/clean:
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_genpy.dir/build.make local_controller_node/CMakeFiles/local_controller_node_genpy.dir/clean
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_genpy.dir/clean
-
-# clean rule for target.
-clean: local_controller_node/CMakeFiles/local_controller_node_genpy.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir
-
-# All Build rule for target.
-local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/all:
-	$(MAKE) -f local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/build.make local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/depend
-	$(MAKE) -f local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/build.make local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target _local_controller_node_generate_messages_check_deps_RControllerCommands"
-.PHONY : local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/all
-
-# Build rule for subdir invocation for target.
-local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
-.PHONY : local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/rule
-
-# Convenience name for target.
-_local_controller_node_generate_messages_check_deps_RControllerCommands: local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/rule
-
-.PHONY : _local_controller_node_generate_messages_check_deps_RControllerCommands
-
-# clean rule for target.
-local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/clean:
-	$(MAKE) -f local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/build.make local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/clean
-.PHONY : local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/clean
-
-# clean rule for target.
-clean: local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir
-
-# All Build rule for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/all: local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/all
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/depend
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=31,32 "Built target local_controller_node_generate_messages_eus"
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-local_controller_node_generate_messages_eus: local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/rule
-
-.PHONY : local_controller_node_generate_messages_eus
-
-# clean rule for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/clean:
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/clean
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/clean
-
-# clean rule for target.
-clean: local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir
-
-# All Build rule for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/all: local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/all
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/depend
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=30 "Built target local_controller_node_generate_messages_cpp"
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-local_controller_node_generate_messages_cpp: local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/rule
-
-.PHONY : local_controller_node_generate_messages_cpp
-
-# clean rule for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/clean:
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/clean
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/clean
-
-# clean rule for target.
-clean: local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir
 
 # All Build rule for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/all: local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/all
-local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/all: local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/all
-local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/all: local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/all
-local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/all: local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/all
-local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/all: local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/all
+local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/all:
 	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/depend
 	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target local_controller_node_generate_messages"
@@ -2077,7 +2689,7 @@ all: local_controller_node/CMakeFiles/local_controller_node_generate_messages.di
 
 # Build rule for subdir invocation for target.
 local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
 .PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages.dir/rule
@@ -2098,229 +2710,57 @@ clean: local_controller_node/CMakeFiles/local_controller_node_generate_messages.
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target local_controller_node/CMakeFiles/local_controller_node_geneus.dir
+# Directory level rules for directory motion_allocator
 
-# All Build rule for target.
-local_controller_node/CMakeFiles/local_controller_node_geneus.dir/all: local_controller_node/CMakeFiles/local_controller_node_generate_messages_eus.dir/all
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_geneus.dir/build.make local_controller_node/CMakeFiles/local_controller_node_geneus.dir/depend
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_geneus.dir/build.make local_controller_node/CMakeFiles/local_controller_node_geneus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target local_controller_node_geneus"
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_geneus.dir/all
+# Convenience name for "all" pass in the directory.
+motion_allocator/all: motion_allocator/CMakeFiles/motion_allocator.dir/all
 
-# Build rule for subdir invocation for target.
-local_controller_node/CMakeFiles/local_controller_node_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node/CMakeFiles/local_controller_node_geneus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_geneus.dir/rule
+.PHONY : motion_allocator/all
 
-# Convenience name for target.
-local_controller_node_geneus: local_controller_node/CMakeFiles/local_controller_node_geneus.dir/rule
+# Convenience name for "clean" pass in the directory.
+motion_allocator/clean: motion_allocator/CMakeFiles/motion_allocator.dir/clean
 
-.PHONY : local_controller_node_geneus
+.PHONY : motion_allocator/clean
 
-# clean rule for target.
-local_controller_node/CMakeFiles/local_controller_node_geneus.dir/clean:
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_geneus.dir/build.make local_controller_node/CMakeFiles/local_controller_node_geneus.dir/clean
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_geneus.dir/clean
+# Convenience name for "preinstall" pass in the directory.
+motion_allocator/preinstall:
 
-# clean rule for target.
-clean: local_controller_node/CMakeFiles/local_controller_node_geneus.dir/clean
-
-.PHONY : clean
+.PHONY : motion_allocator/preinstall
 
 #=============================================================================
-# Target rules for target local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir
+# Target rules for target motion_allocator/CMakeFiles/motion_allocator.dir
 
 # All Build rule for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/all: local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/all
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/depend
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=33 "Built target local_controller_node_generate_messages_lisp"
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/all
+motion_allocator/CMakeFiles/motion_allocator.dir/all: msg/CMakeFiles/msg_generate_messages_cpp.dir/all
+	$(MAKE) -f motion_allocator/CMakeFiles/motion_allocator.dir/build.make motion_allocator/CMakeFiles/motion_allocator.dir/depend
+	$(MAKE) -f motion_allocator/CMakeFiles/motion_allocator.dir/build.make motion_allocator/CMakeFiles/motion_allocator.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=30,31 "Built target motion_allocator"
+.PHONY : motion_allocator/CMakeFiles/motion_allocator.dir/all
+
+# Include target in all.
+all: motion_allocator/CMakeFiles/motion_allocator.dir/all
+
+.PHONY : all
 
 # Build rule for subdir invocation for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/all
+motion_allocator/CMakeFiles/motion_allocator.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 motion_allocator/CMakeFiles/motion_allocator.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/rule
+.PHONY : motion_allocator/CMakeFiles/motion_allocator.dir/rule
 
 # Convenience name for target.
-local_controller_node_generate_messages_lisp: local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/rule
+motion_allocator: motion_allocator/CMakeFiles/motion_allocator.dir/rule
 
-.PHONY : local_controller_node_generate_messages_lisp
-
-# clean rule for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/clean:
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/clean
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/clean
+.PHONY : motion_allocator
 
 # clean rule for target.
-clean: local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir
-
-# All Build rule for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_py.dir/all
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/all: local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/all
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/depend
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=35,36 "Built target local_controller_node_generate_messages_py"
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/rule
-
-# Convenience name for target.
-local_controller_node_generate_messages_py: local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/rule
-
-.PHONY : local_controller_node_generate_messages_py
+motion_allocator/CMakeFiles/motion_allocator.dir/clean:
+	$(MAKE) -f motion_allocator/CMakeFiles/motion_allocator.dir/build.make motion_allocator/CMakeFiles/motion_allocator.dir/clean
+.PHONY : motion_allocator/CMakeFiles/motion_allocator.dir/clean
 
 # clean rule for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/clean:
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/clean
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/clean
-
-# clean rule for target.
-clean: local_controller_node/CMakeFiles/local_controller_node_generate_messages_py.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir
-
-# All Build rule for target.
-local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/all: local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/all
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/build.make local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/depend
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/build.make local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target local_controller_node_gennodejs"
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/all
-
-# Build rule for subdir invocation for target.
-local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/rule
-
-# Convenience name for target.
-local_controller_node_gennodejs: local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/rule
-
-.PHONY : local_controller_node_gennodejs
-
-# clean rule for target.
-local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/clean:
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/build.make local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/clean
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/clean
-
-# clean rule for target.
-clean: local_controller_node/CMakeFiles/local_controller_node_gennodejs.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target local_controller_node/CMakeFiles/local_controller_node_gencpp.dir
-
-# All Build rule for target.
-local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/all: local_controller_node/CMakeFiles/local_controller_node_generate_messages_cpp.dir/all
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/depend
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target local_controller_node_gencpp"
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/all
-
-# Build rule for subdir invocation for target.
-local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/rule
-
-# Convenience name for target.
-local_controller_node_gencpp: local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/rule
-
-.PHONY : local_controller_node_gencpp
-
-# clean rule for target.
-local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/clean:
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/clean
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/clean
-
-# clean rule for target.
-clean: local_controller_node/CMakeFiles/local_controller_node_gencpp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target local_controller_node/CMakeFiles/local_controller_node_genlisp.dir
-
-# All Build rule for target.
-local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/all: local_controller_node/CMakeFiles/local_controller_node_generate_messages_lisp.dir/all
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/depend
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num= "Built target local_controller_node_genlisp"
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/all
-
-# Build rule for subdir invocation for target.
-local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/rule
-
-# Convenience name for target.
-local_controller_node_genlisp: local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/rule
-
-.PHONY : local_controller_node_genlisp
-
-# clean rule for target.
-local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/clean:
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/build.make local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/clean
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/clean
-
-# clean rule for target.
-clean: local_controller_node/CMakeFiles/local_controller_node_genlisp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir
-
-# All Build rule for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/all: gopigo3_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/all: local_controller_node/CMakeFiles/_local_controller_node_generate_messages_check_deps_RControllerCommands.dir/all
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/depend
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/gopigo3_ws/build/CMakeFiles --progress-num=34 "Built target local_controller_node_generate_messages_nodejs"
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/gopigo3_ws/build/CMakeFiles 0
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-local_controller_node_generate_messages_nodejs: local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/rule
-
-.PHONY : local_controller_node_generate_messages_nodejs
-
-# clean rule for target.
-local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/build.make local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/clean
-.PHONY : local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/clean
-
-# clean rule for target.
-clean: local_controller_node/CMakeFiles/local_controller_node_generate_messages_nodejs.dir/clean
+clean: motion_allocator/CMakeFiles/motion_allocator.dir/clean
 
 .PHONY : clean
 

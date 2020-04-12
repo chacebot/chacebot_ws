@@ -58,7 +58,7 @@ std::mutex _mutex;
 std::thread t1;
 std::thread t2;
 
-ros::NodeHandle nh;
+//ros::NodeHandle nh;
 
 ros::Subscriber rc_local;
 ros::Publisher pub_left;

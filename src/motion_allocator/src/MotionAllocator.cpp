@@ -40,7 +40,7 @@ void MessageQueue<T>::send(T &&msg)
 
 MotionAllocator::MotionAllocator(ros::NodeHandle& nodeHandle)
 {
-    nh = nodeHandle;
+    // nh = nodeHandle;
     rc_local = nodeHandle.subscribe("local_cmd", 10, &MotionAllocator::localInputCallBack, this);
     pub_left= nodeHandle.advertise<std_msgs::Int16>("motor/dps/left", 10);
     pub_right= nodeHandle.advertise<std_msgs::Int16>("motor/dps/right", 10);

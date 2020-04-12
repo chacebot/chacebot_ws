@@ -368,6 +368,21 @@ message_generation_DIR:PATH=/opt/ros/kinetic/share/message_generation/cmake
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/home/pi/ros_catkin_ws/build/opt/ros/kinetic/share/message_runtime/cmake
 
+//Value Computed by CMake
+motion_allocator_BINARY_DIR:STATIC=/home/pi/gopigo3_ws/build/motion_allocator
+
+//Value Computed by CMake
+motion_allocator_SOURCE_DIR:STATIC=/home/pi/gopigo3_ws/src/motion_allocator
+
+//Value Computed by CMake
+msg_BINARY_DIR:STATIC=/home/pi/gopigo3_ws/build/msg
+
+//The directory containing a CMake configuration file for msg.
+msg_DIR:PATH=/home/pi/gopigo3_ws/devel/share/msg/cmake
+
+//Value Computed by CMake
+msg_SOURCE_DIR:STATIC=/home/pi/gopigo3_ws/src/msg
+
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
 
@@ -377,11 +392,20 @@ rc_rover_node_BINARY_DIR:STATIC=/home/pi/gopigo3_ws/build/rc_rover_node
 //Value Computed by CMake
 rc_rover_node_SOURCE_DIR:STATIC=/home/pi/gopigo3_ws/src/rc_rover_node
 
+//The directory containing a CMake configuration file for rosconsole.
+rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
+
+//The directory containing a CMake configuration file for roscpp.
+roscpp_DIR:PATH=/opt/ros/kinetic/share/roscpp/cmake
+
 //The directory containing a CMake configuration file for roscpp_serialization.
 roscpp_serialization_DIR:PATH=/home/pi/ros_catkin_ws/build/opt/ros/kinetic/share/roscpp_serialization/cmake
 
 //The directory containing a CMake configuration file for roscpp_traits.
 roscpp_traits_DIR:PATH=/home/pi/ros_catkin_ws/build/opt/ros/kinetic/share/roscpp_traits/cmake
+
+//The directory containing a CMake configuration file for rosgraph_msgs.
+rosgraph_msgs_DIR:PATH=/opt/ros/kinetic/share/rosgraph_msgs/cmake
 
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/home/pi/ros_catkin_ws/build/opt/ros/kinetic/share/rospy/cmake
@@ -397,6 +421,9 @@ std_msgs_DIR:PATH=/home/pi/ros_catkin_ws/build/opt/ros/kinetic/share/std_msgs/cm
 
 //The directory containing a CMake configuration file for std_srvs.
 std_srvs_DIR:PATH=/home/pi/ros_catkin_ws/build/opt/ros/kinetic/share/std_srvs/cmake
+
+//The directory containing a CMake configuration file for xmlrpcpp.
+xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
 
 
 ########################
@@ -500,7 +527,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

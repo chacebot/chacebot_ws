@@ -91,15 +91,15 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(local_controller_node_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "include " STREQUAL " ")
+if(NOT " " STREQUAL " ")
   set(local_controller_node_INCLUDE_DIRS "")
-  set(_include_dirs "include")
+  set(_include_dirs "")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
-  elseif(NOT "https://www.dexterindustries.com/gopigo3/, https://github.com/DexterInd/GoPiGo3 " STREQUAL " ")
-    set(_report "Check the website 'https://www.dexterindustries.com/gopigo3/, https://github.com/DexterInd/GoPiGo3' for information and consider reporting the problem.")
+  elseif(NOT " " STREQUAL " ")
+    set(_report "Check the website '' for information and consider reporting the problem.")
   else()
-    set(_report "Report the problem to the maintainer 'Christian Rauch <chace.medeiros@gmail.com>' and request to fix the problem.")
+    set(_report "Report the problem to the maintainer 'chace <chace@todo.todo>' and request to fix the problem.")
   endif()
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/pi/gopigo3_ws/install/lib;/home/pi/gopigo3_ws/src/rc_rover_node/devel/lib;/home/pi/gopigo3_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/pi/gopigo3_ws/install/lib;/home/pi/gopigo3_ws/src/local_controller_node/devel/lib;/home/pi/gopigo3_ws/src/rc_rover_node/devel/lib;/home/pi/gopigo3_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -152,7 +152,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(local_controller_node_EXPORTED_TARGETS "local_controller_node_generate_messages_cpp;local_controller_node_generate_messages_eus;local_controller_node_generate_messages_lisp;local_controller_node_generate_messages_nodejs;local_controller_node_generate_messages_py")
+set(local_controller_node_EXPORTED_TARGETS "")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${local_controller_node_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -160,7 +160,7 @@ foreach(t ${local_controller_node_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "message_runtime")
+set(depends "rospy;roscpp;msg;std_msgs")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

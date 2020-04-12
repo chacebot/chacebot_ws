@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/pi/gopigo3_ws/src/motion_allocator/devel/setup.sh

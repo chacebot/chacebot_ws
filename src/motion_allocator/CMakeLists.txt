@@ -146,7 +146,7 @@ add_executable(motion_allocator src/MotionAllocator.cpp)
 add_dependencies(motion_allocator msg_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
- target_link_libraries(local_control
+ target_link_libraries(motion_allocator
    ${catkin_LIBRARIES}
  )
 

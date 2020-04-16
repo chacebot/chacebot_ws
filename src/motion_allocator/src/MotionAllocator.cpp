@@ -96,7 +96,7 @@ void MotionAllocator::update()
 
 
 
-void MotionAllocator::execute()
+void MotionAllocator::execute(ros::Rate& loop_rate)
 {
 
     while (ros::ok())

@@ -1,1 +1,0 @@
-set(ORDERED_PATHS "/opt/ros/kinetic/lib;/home/pi/ros_catkin_ws/build/opt/ros/kinetic/lib")

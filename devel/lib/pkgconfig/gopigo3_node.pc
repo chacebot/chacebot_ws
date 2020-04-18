@@ -1,8 +1,0 @@
-prefix=/home/pi/gopigo3_ws/devel
-
-Name: gopigo3_node
-Description: Description of gopigo3_node
-Version: 0.0.0
-Cflags: -I/home/pi/gopigo3_ws/devel/include
-Libs: -L/home/pi/gopigo3_ws/devel/lib 
-Requires: message_runtime

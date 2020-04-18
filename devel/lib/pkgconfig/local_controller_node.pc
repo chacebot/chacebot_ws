@@ -1,8 +1,0 @@
-prefix=/home/pi/gopigo3_ws/devel
-
-Name: local_controller_node
-Description: Description of local_controller_node
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/pi/gopigo3_ws/devel/lib 
-Requires: rospy roscpp msg std_msgs

@@ -13,3 +13,4 @@ devel/
 *.so
 
 *.so
+*.catkin_workspace

@@ -1,8 +1,0 @@
-prefix=/home/pi/gopigo3_ws/src/rc_rover_node/devel
-
-Name: rc_rover_node
-Description: Description of rc_rover_node
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

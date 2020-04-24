@@ -38,7 +38,7 @@ LocalController::readSerial() { // have this be it's own infinite loop thread?
   }
 }
 
-void LocalController::output() { // should the extraction be in read?
+void LocalController::output() { // should this extraction be in read?
   std::string output[2] = {"1500",
                            "1500"};     // use this or global pointer vector?
   std::string raw_input = readSerial(); // mutex here?

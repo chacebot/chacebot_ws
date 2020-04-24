@@ -11,6 +11,7 @@
 #include <string>
 #include <thread>
 #include <vector>
+#include <boost/asio.hpp>
 
 LocalController::LocalController(std::string port, ros::NodeHandle nh,
                                  ros::Rate &loop_rate)
@@ -25,18 +26,13 @@ LocalController::readSerial() { // have this be it's own infinite loop thread?
   using namespace boost;
   char c;
   std::string result;
-  for (;;) {
-    asio::read(serial, asio::buffer(&c, 1));
-    switch (c) {
-    case '\r':
-      break;
-    case '\n':
-      return result;
-    default:
-      result += c;
-    }
-  }
+  asio::streambuf data;
+  boost::asio::read_until(serial, data, '\n');
+  std::istream is(&data);
+  std::getline(is, result);
+  return result;
 }
+
 
 void LocalController::output() { // should this extraction be in read?
   std::string output[2] = {"1500",
@@ -49,10 +45,10 @@ void LocalController::output() { // should this extraction be in read?
   std::istringstream inputstream(raw_input);
 
   inputstream >> output[STEERING_CHANNEL] >> output[DRIVE_CHANNEL] >> status;
-  // std::cout << output[STEERING_CHANNEL] << " ," << output[DRIVE_CHANNEL]
-  //<< "\n";
+  std::cout << output[STEERING_CHANNEL] << " ," << output[DRIVE_CHANNEL]
+            << "\n";
   SAFETY_STATUS = (stoi(status) > 1900 && stoi(status) < 2000) ? true : false;
-  // std::cout << "Status: " << SAFETY_STATUS << "\n";
+  std::cout << "Status: " << SAFETY_STATUS << "\n";
   command_msg.status = SAFETY_STATUS;
 
   if (SAFETY_STATUS == true) {
@@ -80,20 +76,19 @@ void LocalController::update(ros::Rate &loop_rate) {
 }
 
 int main(int argc, char **argv) {
-  std::string device = "/dev/ttyACM0"; //should be yaml config
-  ros::init(argc, argv, "local_controller"); //should be yaml config
+  std::string device = "/dev/ttyACM0";       // should be yaml config
+  ros::init(argc, argv, "local_controller"); // should be yaml config
   ros::NodeHandle nh;
-  ros::Rate loop_rate(50); //should be yaml config
+  ros::Rate loop_rate(50); // should be yaml config
 
-  try{
-  std::unique_ptr<LocalController> lc =
-      std::make_unique<LocalController>(device, nh, loop_rate);
-      lc->update(loop_rate);
+  try {
+    std::unique_ptr<LocalController> lc =
+        std::make_unique<LocalController>(device, nh, loop_rate);
+    lc->update(loop_rate);
   }
 
-  catch(...)
-  {
-    std::cout<<"Serial Port unavailible for RC Control\n";
+  catch (...) {
+    std::cout << "Serial Port unavailible for RC Control\n";
   }
 
   return 0;

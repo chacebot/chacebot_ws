@@ -78,8 +78,8 @@ void MotionAllocator::update() {
   t2 = std::thread(&MotionAllocator::output, this);
 
   std::vector<int> package = message.receive();
-  std::cout << "Left: " << package[LEFT_WHEEL]
-            << ", Right: " << package[RIGHT_WHEEL] << "\n";
+  // std::cout << "Left: " << package[LEFT_WHEEL]
+  //         << ", Right: " << package[RIGHT_WHEEL] << "\n";
 
   msg_left.data = std::move(package[LEFT_WHEEL]);
   msg_right.data = std::move(package[RIGHT_WHEEL]);
@@ -102,7 +102,7 @@ void MotionAllocator::execute(ros::Rate &loop_rate) {
 int main(int argc, char **argv)
 
 {
-  ros::init(argc, argv, "motion_allocator");
+  ros::init(argc, argv, "motion_allocator"); //should be yaml config
   ros::NodeHandle nh;
   ros::Rate loop_rate(50); // should be yaml config
 

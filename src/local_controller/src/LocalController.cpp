@@ -1,17 +1,5 @@
 #include "LocalController.h"
 
-#include "ros/ros.h"
-#include "std_msgs/Int16.h"
-#include <msg/RCLocal.h>
-
-#include <chrono>
-#include <iostream>
-#include <memory>
-#include <mutex>
-#include <string>
-#include <thread>
-#include <vector>
-#include <boost/asio.hpp>
 
 LocalController::LocalController(std::string port, ros::NodeHandle nh,
                                  ros::Rate &loop_rate)
@@ -33,40 +21,27 @@ LocalController::readSerial() { // have this be it's own infinite loop thread?
   return result;
 }
 
-
-void LocalController::output() { // should this extraction be in read?
-  std::string output[2] = {"1500",
-                           "1500"};     // use this or global pointer vector?
-  std::string raw_input = readSerial(); // mutex here?
+void LocalController::eventHandler() { // should this extraction be in read?
+  std::string raw_input = readSerial(); 
   std::string status;
   std::replace(raw_input.begin(), raw_input.end(), '{', ' ');
   std::replace(raw_input.begin(), raw_input.end(), ',', ' ');
   std::replace(raw_input.begin(), raw_input.end(), '}', ' ');
   std::istringstream inputstream(raw_input);
 
-  inputstream >> output[STEERING_CHANNEL] >> output[DRIVE_CHANNEL] >> status;
-  std::cout << output[STEERING_CHANNEL] << " ," << output[DRIVE_CHANNEL]
-            << "\n";
-  SAFETY_STATUS = (stoi(status) > 1900 && stoi(status) < 2000) ? true : false;
-  std::cout << "Status: " << SAFETY_STATUS << "\n";
-  command_msg.status = SAFETY_STATUS;
+inputstream >> message.STEERING >> message.DRIVE >> status;
+message.STATUS = (stoi(status) > 1900 && stoi(status) < 2000) ? SafetyStatus::enabled : SafetyStatus::disabled;
+command_msg.steering = message.STATUS == SafetyStatus::enabled ? message.STEERING : 1500;
+command_msg.drive = message.STATUS == SafetyStatus::enabled ? message.DRIVE : 1500;
+command_msg.status = message.STATUS == SafetyStatus::enabled ? true : false;
 
-  if (SAFETY_STATUS == true) {
-    command_msg.steering = stoi(output[0]);
-    command_msg.drive = stoi(output[1]);
-  }
-
-  else {
-    command_msg.steering = 1500;
-    command_msg.drive = 1500;
-  }
 }
 
-void LocalController::update(ros::Rate &loop_rate) {
+void LocalController::execute(ros::Rate &loop_rate) {
 
   while (ros::ok()) {
     try {
-      output(); // use future - promise here?
+      eventHandler();
     } catch (...) {
       std::cout << "Exception handled with serial read\n";
     };
@@ -82,9 +57,8 @@ int main(int argc, char **argv) {
   ros::Rate loop_rate(50); // should be yaml config
 
   try {
-    std::unique_ptr<LocalController> lc =
-        std::make_unique<LocalController>(device, nh, loop_rate);
-    lc->update(loop_rate);
+    LocalController lc(device, nh, loop_rate);
+    lc.execute(loop_rate);
   }
 
   catch (...) {

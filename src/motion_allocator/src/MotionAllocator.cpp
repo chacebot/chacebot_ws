@@ -75,7 +75,8 @@ void MotionAllocator::output() {
 }
 
 void MotionAllocator::update() {
-  t2 = std::thread(&MotionAllocator::output, this);
+  //t2 = std::thread(&MotionAllocator::output, this);
+  output();
 
   std::vector<int> package = message.receive();
   // std::cout << "Left: " << package[LEFT_WHEEL]
@@ -84,7 +85,7 @@ void MotionAllocator::update() {
   msg_left.data = std::move(package[LEFT_WHEEL]);
   msg_right.data = std::move(package[RIGHT_WHEEL]);
 
-  t2.join();
+  //t2.join();
 }
 
 void MotionAllocator::execute(ros::Rate &loop_rate) {

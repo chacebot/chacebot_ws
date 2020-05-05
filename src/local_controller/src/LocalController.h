@@ -19,14 +19,16 @@ public:
   enum class SafetyStatus { enabled, disabled };
 
   struct Message {
-    int STEERING = 1500;
-    int DRIVE = 1500;
+    float STEERING {};
+    float DRIVE {};
     SafetyStatus STATUS = SafetyStatus::disabled;
   };
 
 private:
   std::string readSerial();
+  static const float rcConverter(const int &ppm);
   void eventHandler();
+
 
   Message message;
 

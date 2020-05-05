@@ -1,6 +1,5 @@
 #include "LocalController.h"
 
-
 LocalController::LocalController(std::string port, ros::NodeHandle nh,
                                  ros::Rate &loop_rate)
     : io(), serial(io, port)
@@ -10,39 +9,52 @@ LocalController::LocalController(std::string port, ros::NodeHandle nh,
 }
 
 std::string
-LocalController::readSerial() { // have this be it's own infinite loop thread?
+LocalController::readSerial()
+{ 
   using namespace boost;
   char c;
   std::string result;
   asio::streambuf data;
+  int steering, drive, status;
+
   boost::asio::read_until(serial, data, '\n');
   std::istream is(&data);
   std::getline(is, result);
+  std::replace(result.begin(), result.end(), '{', ' ');
+  std::replace(result.begin(), result.end(), ',', ' ');
+  std::replace(result.begin(), result.end(), '}', ' ');
+  std::istringstream inputstream(result);
+  inputstream >> steering >> drive >> status;
+  message.STEERING = rcConverter(steering);
+  message.DRIVE = rcConverter(drive);
+  message.STATUS = (status > 1900 && status < 2000) ? SafetyStatus::enabled : SafetyStatus::disabled;
   return result;
 }
 
-void LocalController::eventHandler() { // should this extraction be in read?
-  std::string raw_input = readSerial(); 
-  std::string status;
-  std::replace(raw_input.begin(), raw_input.end(), '{', ' ');
-  std::replace(raw_input.begin(), raw_input.end(), ',', ' ');
-  std::replace(raw_input.begin(), raw_input.end(), '}', ' ');
-  std::istringstream inputstream(raw_input);
-
-inputstream >> message.STEERING >> message.DRIVE >> status;
-message.STATUS = (stoi(status) > 1900 && stoi(status) < 2000) ? SafetyStatus::enabled : SafetyStatus::disabled;
-command_msg.steering = message.STATUS == SafetyStatus::enabled ? message.STEERING : 1500;
-command_msg.drive = message.STATUS == SafetyStatus::enabled ? message.DRIVE : 1500;
-command_msg.status = message.STATUS == SafetyStatus::enabled ? true : false;
-
+const float LocalController::rcConverter(const int &ppm)
+{
+  return (ppm == 0) ? 0 : (ppm - 1500) / 500.0;
 }
 
-void LocalController::execute(ros::Rate &loop_rate) {
+void LocalController::eventHandler()
+{ 
+  readSerial();
+  command_msg.steering = message.STATUS == SafetyStatus::enabled ? message.STEERING : 0;
+  command_msg.drive = message.STATUS == SafetyStatus::enabled ? message.DRIVE : 0;
+  command_msg.status = message.STATUS == SafetyStatus::enabled ? true : false;
+}
 
-  while (ros::ok()) {
-    try {
+void LocalController::execute(ros::Rate &loop_rate)
+{
+
+  while (ros::ok())
+  {
+    try
+    {
       eventHandler();
-    } catch (...) {
+    }
+    catch (...)
+    {
       std::cout << "Exception handled with serial read\n";
     };
     publisher.publish(command_msg);
@@ -50,18 +62,21 @@ void LocalController::execute(ros::Rate &loop_rate) {
   }
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
   std::string device = "/dev/ttyACM0";       // should be yaml config
   ros::init(argc, argv, "local_controller"); // should be yaml config
   ros::NodeHandle nh;
   ros::Rate loop_rate(50); // should be yaml config
 
-  try {
+  try
+  {
     LocalController lc(device, nh, loop_rate);
     lc.execute(loop_rate);
   }
 
-  catch (...) {
+  catch (...)
+  {
     std::cout << "Serial Port unavailible for RC Control\n";
   }
 

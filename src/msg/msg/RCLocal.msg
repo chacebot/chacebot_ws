@@ -1,5 +1,5 @@
-int16 steering
-int16 drive
+float32 steering
+float32 drive
 bool status
 
 

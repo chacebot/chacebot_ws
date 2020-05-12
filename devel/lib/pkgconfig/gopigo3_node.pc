@@ -1,0 +1,8 @@
+prefix=/home/chace/Github/chacebot/containers/ros/devel
+
+Name: gopigo3_node
+Description: Description of gopigo3_node
+Version: 0.0.0
+Cflags: -I/home/chace/Github/chacebot/containers/ros/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

@@ -1,8 +1,0 @@
-prefix=/home/chace/Github/chacebot/containers/ros/devel
-
-Name: motion_allocator
-Description: Description of motion_allocator
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp rospy msg std_msgs

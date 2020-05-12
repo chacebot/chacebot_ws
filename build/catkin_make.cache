@@ -1,2 +1,0 @@
-gopigo3_node:local_controller:motion_allocator:msg
--DCATKIN_DEVEL_PREFIX=/home/chace/Github/chacebot/containers/ros/devel -DCMAKE_INSTALL_PREFIX=/home/chace/Github/chacebot/containers/ros/install -G Unix Makefiles

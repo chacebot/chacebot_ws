@@ -1,0 +1,21 @@
+# Don't track content of these folders
+build/
+devel/
+include/
+
+
+/src/CMakeLists.txt
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.so
+*.catkin_workspace
+#*.gitignore
+*.vscode

@@ -4,28 +4,33 @@
 #include "ros/ros.h"
 #include <msg/RCLocal.h>
 #include <boost/asio.hpp>
-
-
+#include <string>
+#include <regex>
 
 class LocalController
 
 {
 public:
   LocalController(std::string port, ros::NodeHandle nh, ros::Rate &loop_rate);
-  //~LocalController();
+
   void
-  execute(ros::Rate &loop_rate); 
+  execute(ros::Rate &loop_rate);
 
-  enum class SafetyStatus { enabled, disabled };
+  enum class SafetyStatus
+  {
+    is_enabled,
+    is_disabled
+  };
 
-  struct Message {
-    float STEERING {};
-    float DRIVE {};
-    SafetyStatus STATUS = SafetyStatus::disabled;
+  struct Message
+  {
+    float STEERING{};
+    float DRIVE{};
+    SafetyStatus STATUS = SafetyStatus::is_disabled;
   };
 
 private:
-  std::string readSerial();
+  void readSerial();
   static const float rcConverter(const int &ppm);
   void eventHandler();
 
@@ -37,7 +42,6 @@ private:
 
   ros::Publisher publisher;
   msg::RCLocal command_msg;
-
 };
 
 #endif

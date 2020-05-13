@@ -4,13 +4,6 @@
 #include "ros/ros.h"
 #include "std_msgs/Int16.h"
 #include <msg/RCLocal.h>
-#include "MessageQueue.h"
-
-#include <chrono>
-#include <condition_variable>
-#include <deque>
-#include <memory>
-#include <mutex>
 
 
 class MotionAllocator {
@@ -34,18 +27,12 @@ private:
     int right_wheel_speed{0};
   };
 
-  MessageQueue<Output> message;
-
   Input _input;
   Output _output;
 
-  std::mutex _mutex;
-
   ros::Subscriber rc_local;
-
   ros::Publisher pub_left;
   ros::Publisher pub_right;
-
   std_msgs::Int16 msg_left;
   std_msgs::Int16 msg_right;
 

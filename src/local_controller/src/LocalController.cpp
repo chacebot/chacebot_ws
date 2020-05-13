@@ -1,4 +1,5 @@
 #include "LocalController.h"
+#include <iostream>
 
 LocalController::LocalController(std::string port, ros::NodeHandle nh,
                                  ros::Rate &loop_rate)
@@ -8,27 +9,49 @@ LocalController::LocalController(std::string port, ros::NodeHandle nh,
   publisher = nh.advertise<msg::RCLocal>("local_cmd", 10);
 }
 
-std::string
-LocalController::readSerial()
-{ 
-  using namespace boost;
-  char c;
+void LocalController::readSerial()
+{
   std::string result;
-  asio::streambuf data;
+  boost::asio::streambuf data;
   int steering, drive, status;
 
   boost::asio::read_until(serial, data, '\n');
   std::istream is(&data);
   std::getline(is, result);
-  std::replace(result.begin(), result.end(), '{', ' ');
+  std::cout<<"Pattern to match: " << result <<"\n";
+
+  std::string raw_input = "<1500,1500,1500>";
+
+  std::cout <<"RawInput: " << raw_input << "\n";
+
+  //raw_input = result;
+
+static std::regex const inputPattern{"^<(\\d{1,4}),(\\d{1,4}),(\\d{1,4})>$"};
+
+   std::smatch matches;
+  
+   if (std::regex_search(raw_input, matches, inputPattern))
+  { 
+    std::cout<< "Matches: " << matches[1] << ", " << matches[2] << ", " << matches[3] <<"\n";
+    //auto const rawStatus = std::stoi(matches[3]);
+    //message.STEERING = rcConverter(std::stoi(matches[1]));
+    //message.DRIVE = rcConverter(std::stoi(matches[2]));
+    //message.STATUS = (status > 1900 && status < 2000) ? SafetyStatus::is_enabled : SafetyStatus::is_disabled;
+  }
+  else
+  {
+    std::cout <<"Regex does not read anything\n";
+  }
+
+  
+  std::replace(result.begin(), result.end(), '<', ' ');
   std::replace(result.begin(), result.end(), ',', ' ');
-  std::replace(result.begin(), result.end(), '}', ' ');
+  std::replace(result.begin(), result.end(), '>', ' ');
   std::istringstream inputstream(result);
   inputstream >> steering >> drive >> status;
   message.STEERING = rcConverter(steering);
   message.DRIVE = rcConverter(drive);
-  message.STATUS = (status > 1900 && status < 2000) ? SafetyStatus::enabled : SafetyStatus::disabled;
-  return result;
+  message.STATUS = (status > 1900 && status < 2000) ? SafetyStatus::is_enabled : SafetyStatus::is_disabled;
 }
 
 const float LocalController::rcConverter(const int &ppm)
@@ -37,11 +60,11 @@ const float LocalController::rcConverter(const int &ppm)
 }
 
 void LocalController::eventHandler()
-{ 
+{
   readSerial();
-  command_msg.steering = message.STATUS == SafetyStatus::enabled ? message.STEERING : 0;
-  command_msg.drive = message.STATUS == SafetyStatus::enabled ? message.DRIVE : 0;
-  command_msg.status = message.STATUS == SafetyStatus::enabled ? true : false;
+  command_msg.steering = message.STATUS == SafetyStatus::is_enabled ? message.STEERING : 0;
+  command_msg.drive = message.STATUS == SafetyStatus::is_enabled ? message.DRIVE : 0;
+  command_msg.status = message.STATUS == SafetyStatus::is_enabled ? true : false;
 }
 
 void LocalController::execute(ros::Rate &loop_rate)

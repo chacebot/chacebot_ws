@@ -5,7 +5,6 @@
 #include "std_msgs/Int16.h"
 #include <msg/RCLocal.h>
 
-
 class MotionAllocator {
 
 private:
@@ -14,15 +13,12 @@ private:
   void eventHandler();
   void update();
 
-
-  struct Input
-  {
+  struct Input {
     float steering{0};
     float drive{0};
   };
 
-  struct Output
-  {
+  struct Output {
     int left_wheel_speed{0};
     int right_wheel_speed{0};
   };
